@@ -18,6 +18,7 @@
       <div class="col">
         <p>Õpilase konspekt</p>
         <p>Materjali autor: õppejõud Annemai Raidjõe 2019, <a href="https://moodle.hitsa.ee">allikas</a></p>
+        <p>Matemaatika arengu huvides lähtekood avalik: <a href="https://github.com/silverv/k-rgmat">github</a></p>
         <h1>Kompleksarvud</h1>
         <p>Laiendades reaalarvude hulka `R` arvuga, mille ruut on võrdne -1, saame kompleksarvude hulga. Kompleksarvude
           hulka tähistatakse tähega C.</p>
@@ -148,7 +149,7 @@
         <div class="def"><p><b>Definitsioon.</b> Funktsiooni `f` määramispiirkonnaga X nimetatakse kasvavaks (kahanevaks) hulgas `S sub X`, kui iga `x_1, x_2 in S` korral alati sellest, et `x_1 < x_2` järeldub, et `f(x_1) < f(x_2)` (kahaneva puhul `f(x_1) > f(x_2)`)</p></div>
         <p>Funktsiooni `f`, mis rahuldab tingimust</p>
         `x_1 < x_2\ \ =>\ \ f(x_1)<=f(x_2)\ \ forall x_1, x_2 in S`
-        <p>nimeatakse <i>monotoonselt kasvavaks hulgas `S`</i>.</p>
+        <p>nimetakse <i>monotoonselt kasvavaks hulgas `S`</i>.</p>
         <p>Funktsiooni `f`, mis aga rahuldab tingimust</p>
         `x_1 < x_2\ \=>\ \ f(x_1)>=f(x_2)\ \ forall x_1, x_2 in S`
         <p>nimetakse <i>monotoonselt kahanevaks hulgas `S`</i>.</p>
@@ -199,6 +200,22 @@
         <p>Tähistatakse</p>
         `lim_(x->a) f(x)=A`.
         <p>Vaatleme funktsiooni `f`, mille määramispiirkonnaks on `X`. Olgu `a` selle piirkonna selline kuhjumispunkt, mille mingi parempoolne ümbrus sisaldub hulgas X, st leidub `delta_0 > 0`, nii et `(a, a+ delta_0) sub X`.</p>
+        </div>
+        <div class="def"><p><b>Definitsioon 9.1.2.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->a+` `(x-> a-)`, kui suvalise `epsilon > 0` korral leidub `delta = delta(epsilon) > 0`, et iga `x in X` korral, mis rahuldab tingimust</p>
+        `0 < x -a < delta``\ \ \ (0 < a - x < delta)`,
+        <p>kehtib võrratus</p>
+        `|f(x) - A| < epsilon`.
+        <p>Tähistatakse</p>
+        `lim_(x->a+) f(x) = A``\ \ \ (lim_(x->a-) f(x)=A)`.
+        <p>Protsessi `x->a+` `(x->a-)` nimetatakse parempoolseks (vasakpoolseks) piirväärtuseks.</p>
+        </div>
+        <p><b>Omadus 9.1.1.</b> Arv `A` on funktsiooni `f` piirväärtus protsessis `x -> a` parajasti siis, kui `A` on selle funktsiooni `f` piirväärtus nii protsessis `x->a+` kui ka `x-> a-`.</p>
+        <div class="def"><p><b>Definitsioon 9.1.3.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->infty` `("või " x->-infty)` kui iga positiivse arvu `epsilon > 0` jaoks leidub selline positiivne arv `N=N(epsilon)>0`, et iga</p>
+        `x>N``\ \ \ (x < -N)``\ \ \ (x in X)`
+        <p>korral kehtib võrratus</p>
+        `|f(x)-N| < epsilon`.
+        <p>Sel juhul kirjutatakse</p>
+        `lim_(x->infty) f(x) = A` `\ \ \ (lim_(x->-infty) f(x) = A)`
         </div>
       </div>
     </div>
