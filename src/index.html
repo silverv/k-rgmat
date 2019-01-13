@@ -15,7 +15,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-lg-2">Kasutusel <a href="https://www.mathjax.org/">MathJax</a> ja <a href="https://getbootstrap.com/">Bootstrap 4</a></div>
+      <div class="col-lg-2">Kasutusel <a href="https://www.mathjax.org/">MathJax</a>, <a href="https://getbootstrap.com/">Bootstrap 4</a> ja <a href="http://asciimath.org/">AsciiMath</a></div>
       <div class="col">
         <p>Õpilase konspekt</p>
         <p>õppejõud Annemai Raidjõe 2019 materjal</p>
@@ -249,10 +249,24 @@
         <p>kui on olemas lõplikud piirväärtused `lim f(x)` ja `lim g(x)`, siis</p>
         <ol>
           <li>`lim c*f(x)=c*lim f(x)\ \ \ (c-const)`</li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>`lim [f(x) pm g(x)] =``\ lim f(x) pm lim g(x)`</li>
+          <li>`lim f(x)*g(x)=lim f(x) * lim g(x)`</li>
+          <li>`lim (f(x))/(g(x))=(lim f(x))/(lim g(x))` `\ \ \ (lim g(x) ne 0)`</li>
         </ol>
+        <p>Aritmeetiliste tehetega seotud piirväärtuste omadused kehtivad suvalise piirprotsessi korral.</p>
+        <h2>Jada piirväärtus</h2>
+        <div class="def"><p><b>Definitsioon 9.3.1.</b> Funktsioon f(x), mille määramispiirkonnaks on kõigi naturaalarvude hulk `N`, nimetatakse <i>jadaks</i>. Suurust `x_n=f(n)` nimetatakse jada üldliikmeks.</p>
+        <p>Jada tähistatakse `{x_1, x_2, ..., x_n, ...}` või `{x_n}_(n in N)` või `(x_n)`.</p>
+        </div>
+        <div class="def"><p><b>Definitsioon 9.3.2.</b> Iga jada, mis saadakse jadast mingi lõpliku või lõpmatu hulga jada elementide väljajätmisel, nimetatakse selle jada osajadaks.</p></div>
+        <div class="def"><p><b>Definitsioon 9.3.3.</b> Arvu `a` nimetatakse jada `(x_n)` <i>piirväärtuseks</i>, kui suvalise positiivse arvu `epsilon > 0` korral leidub selline naturaalarv `n_0=n_0(epsilon)`, et iga naturaalarvu `n`, mis on suurem kui `n_0 (n>=n_0)` korral `|x_n - a| < epsilon`. Tähistatakse</p>
+        `lim_(n->infty) x_n = a`.
+        </div>
+        <div class="def"><p><b>Definitsioon 9.3.4.</b> Öeldakse, et jada `(x_n)` piirväärtus on `infty (-infty)`, kui iga arvu `M>0` korral leidub arv `n_0=n_0(epsilon)`, et kehtib võrratus `x_n > M (X_n < -M)`, alati kui `n>= n_0` ja kirjutatakse</p>
+        `lim_(n->infty) x_n = infty``\ \ \ (lim_(n->infty) x_n = -infty)`.
+        <p>Jada, millel on lõplik piirväärtus nimetatakse <i>koonduvaks jadaks</i>. Jada, millel ei ole lõpliku piirväärtust, nimetatakse <i>hajuvaks jadaks</i>.</p>
+        </div>
+        <h2>Funktsiooni pidevus. Pidevuse omadused.</h2>
       </div>
     </div>
   </div>
