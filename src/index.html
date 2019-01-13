@@ -16,7 +16,8 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        Materjali autor: Annemai Raidjõe 2019, <a href="moodle.hitsa.ee">allikas</a>
+        <p>Õpilase konspekt</p>
+        <p>Materjali autor: õppejõud Annemai Raidjõe 2019, <a href="https://moodle.hitsa.ee">allikas</a></p>
         <h1>Kompleksarvud</h1>
         <p>Laiendades reaalarvude hulka `R` arvuga, mille ruut on võrdne -1, saame kompleksarvude hulga. Kompleksarvude
           hulka tähistatakse tähega C.</p>
@@ -51,7 +52,7 @@
             algebraliseks ehk Descartes'i kujuks.</p>
         </div>
         <div class="def">
-          <p><b>Definitsioon 1.3.2.</b>Kompleksarvu `z=a+bi` mooduliks nimetatakse reaalarvu |z|, mis leitakse seosega:</p>
+          <p><b>Definitsioon 1.3.2.</b> Kompleksarvu `z=a+bi` mooduliks nimetatakse reaalarvu |z|, mis leitakse seosega:</p>
           `|z|=sqrt(a^2+b^2)`
           <p>Moodul `|z|>=0` on reaalarv ja kujutab endast komplekstasandil asuva punkti `A=(a;b)` kaugust nullpunktist.</p>
           <img class="img-fluid" src="2019-01-06-12-47-25.png" alt="">
@@ -165,6 +166,39 @@
           <li>avaldada võrrandist `y=f(x)` muutuja `x` muutuja `y` kaudu</li>
           <li>vahetada tähised `x` ja `y`.</li>
         </ol>
+        </div>
+        <h2>Tehted funktsioonidega</h2>
+        <p>Olgu `f` ja `g` funktsioonid, mis on määratud ühel ja samal hulgal `X`. Defineerime funktsioonide summa `f+g`, vahe `f-g`, korrutise `f*g` ja jagatise `f/g` järgmiste seostega</p>
+        <ol>
+          <li>`(f+g)(x)=f(x)+g(x)`</li>
+          <li>`(f-g)(x)=f(x)-g(x)`</li>
+          <li>`(f*g)(x)=f(x)*g(x)`</li>
+          <li>`(f/g)(x)=(f(x))/(g(x))`, `\ \ g(x) ne 0`</li>
+        </ol>
+        <p><b>Näide 8.5.1.</b> Leiame funktsioonide `f(x)=2x` ja `g(x)=x-1` summa, vahe, korrutise ja jagatise.</p>
+        <ol>
+          <li>`(f+g)(x)=f(x)+g(x)=2x+(x-1)=3x+1`</li>
+          <li>`(f-g)(x)=f(x)-g(x)=2x-(x-1)=x+1`</li>
+          <li>`(f*g)(x)=f(x)*g(x)`</li>
+          <li>`(f/g)(x)=(f(x))/(g(x))=(2x)/(x-1)`,`\ \ g(x) ne 0`</li>
+        </ol>
+        <h2>Liitfunktsioon. Liitfunktsiooni moodustamine</h2>
+        <p>Olgu antud kaks funktsiooni: `y=f(x)` määramispiirkonnaga `X_f` ja `z=g(y)` määramispiirkonnaga `Y_g`. Asendades suuruse `y` funktsiooni `g` avaldises `f(x)`-ga saame uue funktsiooni mille argumendiks on `x` ja sõltuvaks muutujaks `z`, kusjuures `x` ja `z` vaheline seos on antud kujul `z=g[f(x)]`. Tegemist on funktsioonide `f` ja `g` liitfunktsiooniga. Liitfunktsiooni tähistatakse `g @ f`. Seega saame kirjutada `z=(g @ f)(x)=g[f(x)]`.</p>
+        <p>Näiteks annavad funktsioonid</p>
+        `f(x)=sqrt(x+3)`
+        <p>ja</p>
+        `g(y)=ln y`
+        <p>liitfunktsiooni</p>
+        `(g @ f)(x) = ln sqrt (x+3)`. <br>
+        <h2>Funktsiooni piirväärtuse definitsioonid piirprotsessis `x->a`, `x->a+`, `x->a-`, `x-> infty`, `x->-infty`. Definitsioone osata selgitada graafiliselt.</h2>
+        <p>Olgu antud funktsioon `f`, mille määramispiirkonnaks on piirkond `X`. Olgu `a` selle piirkonna kuhjumispunkt, st selle punkti `a` igas ümbruses `(a - delta_0, a+delta_0), delta_0 > 0` leidub punktist `a` erinevaid hulga `X` punkte `(x in X, x ne a)`.</p>
+        <div class="def"><p><b>Definitsioon 9.1.1.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->a`, kui suvalise `epsilon > 0` korral leidub `delta = delta(epsilon)`, et iga `x in X` korral, mis rahuldab tingimust</p>
+        `0 < |x-a| < sigma,`
+        <p>kehtiv võrratus</p>
+        `|f(x)-A| < epsilon`.
+        <p>Tähistatakse</p>
+        `lim_(x->a) f(x)=A`.
+        <p>Vaatleme funktsiooni `f`, mille määramispiirkonnaks on `X`. Olgu `a` selle piirkonna selline kuhjumispunkt, mille mingi parempoolne ümbrus sisaldub hulgas X, st leidub `delta_0 > 0`, nii et `(a, a+ delta_0) sub X`.</p>
         </div>
       </div>
     </div>
