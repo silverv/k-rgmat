@@ -1,0 +1,12 @@
+dependencies:
+  mathjax: 2.7.5
+packages:
+  /mathjax/2.7.5:
+    dev: false
+    resolution:
+      integrity: sha512-OzsJNitEHAJB3y4IIlPCAvS0yoXwYjlo2Y4kmm9KQzyIBZt2d8yKRalby3uTRNN4fZQiGL2iMXjpdP1u2Rq2DQ==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  mathjax: ^2.7.5

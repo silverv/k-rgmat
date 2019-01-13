@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Integralide tabel</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="../node_modules/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script src="../node_modules/mathjax/extensions/MathZoom.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        Materjali autor: Annemai Raidjõe 2019, <a href="moodle.hitsa.ee">allikas</a>
+        <h1>Kompleksarvud</h1>
+        <p>Laiendades reaalarvude hulka `R` arvuga, mille ruut on võrdne -1, saame kompleksarvude hulga. Kompleksarvude
+          hulka tähistatakse tähega C.</p>
+        <h2>Kompleksarvu definitsioon</h2>
+        <div class="def">
+          <p><b>Definitsioon 1.1.1.</b> Arvu, mille ruut on -1 nimetatakse imaginaarühikuks ja tähistatakse sümboliga
+            `i`</p> `i = sqrt(-1)` <p>imaginaarühiku abil saab esitada juuri negatiivsetest arvudest. Näiteks</p>
+          `sqrt(-36)``=sqrt((-1)*36)``=sqrt(-1)*sqrt(36)``=6*sqrt(-1)=6i` <p>Üldiselt c > 0 korral</p>
+          `sqrt(-c)``=sqrt((-1)*c)=``sqrt(-1)*sqrt(c)=``sqrt(c)*i`
+        </div>
+        <div class="def">
+          <p><b>Definitsioon 1.1.2.</b> Arve kujul `z=a+bi`, kus `a` ja `b` on reaalarvud ning `i` imaginaarühik,
+            nimetatakse kompleksarvudeks.</p>
+          <p>Arvu `a` nimetatakse kompleksarvu `z=a+bi` reaalosaks ja arvu `bi` selle imaginaarosaks. Reaalosa
+            tähistatakse `a=Re(z)` ja imaginaarosa tähistatakse `bi=Im(z)`</p>
+        </div>
+        <h2>Kompleksarvu kujutamine komplekstasandil</h2>
+        <p>Kompleksarv `z=a+bi` sõltub kahest reaalarvulisest parameetrist `a` ja `b`, kus `a` ja `b` võivad omandada
+          mistahes reaalarvulisi väärtusi. Seetõttu võib kompleksarvu kujutada ka järjestatud paarina `(a;b)`, millele
+          vastab komplekstasandil punkt `A=(a;b)`</p>
+        <p>Kompleksarvu võib vaadelda ka nullpunkti rakendatud vektorina.</p>
+        <img class="img-fluid" src="2019-01-06-12-16-12.png.png" alt="">
+        <p>xy-tasandit vaadeldakse kõigi kompleksarvude hulgana. Sellist tasandit nimetatakse komplekstasandiks.
+          Kompleksarvu reaalosa kujutatakse x-teljel ja imaginaarosa kujutatakse y-teljel. Seepärast nimetatakse
+          x-telge reaalteljeks ja y-telge imaginaarteljeks.</p>
+        <img class="img-fluid" src="2019-01-06-12-14-03.png" alt="" srcset="">
+        <h2>Kompleksarvu algebraline kuju</h2>
+        <p>Kompleksarvudel on mitmeid erinevaid esitusviise ehk kujusid. Kõige levinum on kompleksarvu algebraline
+          kuju.</p>
+        <div class="def">
+          <p><b>Definitsioon 1.3.1.</b> Kompleksarvu `z` esitusviisi `z=a+bi` nimetatakse kompleksarvu `z`
+            algebraliseks ehk Descartes'i kujuks.</p>
+        </div>
+        <div class="def">
+          <p><b>Definitsioon 1.3.2.</b>Kompleksarvu `z=a+bi` mooduliks nimetatakse reaalarvu |z|, mis leitakse seosega:</p>
+          `|z|=sqrt(a^2+b^2)`
+          <p>Moodul `|z|>=0` on reaalarv ja kujutab endast komplekstasandil asuva punkti `A=(a;b)` kaugust nullpunktist.</p>
+          <img class="img-fluid" src="2019-01-06-12-47-25.png" alt="">
+          <p>Jooniselt on näha, et kompleksarvu moodul leitakse Pythagorase teoreemi abil. Näiteks kompleksarvu `z=3+4i` moodul on `|z|=|3+4i|=sqrt(3^2+4^2)=5`.</p>
+        </div>
+        <div class="def">
+          <p><b>Definitsioon 1.3.3.</b> Kompleksarvu `z=a+bi` kaaskompleksarvuks ehk kaaskompleksiks nimetatakse kompleksarvu</p>
+          `bar z = a - bi`
+          <p>Kaaskompleksarv `bar z` asub arvuga `z` nullpunktist võrdsel kaugusel ning `z` ja `bar z` on sümmeetrilised reaaltelje suhtes.</p>
+          <img class="img-fluid" src="2019-01-06-12-51-21.png" alt="">
+        </div>
+        <h1>Funktsioon. Piirväärtus</h1>
+        <h2>Funktsiooni mõiste. Ülalt ja alt tõkestatud funktsioon. Tuua näiteid.</h2>
+        <div class="def">
+          <p><b>Definitsioon 8.1.1.</b> Kui hulga `X sub R` igale elemendile `x` on vastavusse seatud element `y` hulgast `X`, siis öeldakse, et hulgal `X` on määratud (ühene) <i>funktsioon</i> `f` ja seda vastavust tähistatakse `y=f(x)` (`x in X`). Kõikide elementide hulka `x in X`, mille puhul funktsioon `f(x)` on määratud nimetatakse funktsiooni `f` <i>määramispiirkonnaks</i>. Funktsiooni `f` kõikide väärtuste hulka</p>
+          `Y = {y:\ y= f(x), x in X}`
+          <p>nimetatakse funktsiooni `f` <i>muutumispiirkonnaks ehk väärtuste hulgaks</i>.</p>
+          <p>Elementi x nimetatakse funktsiooni `f` argumendiks ehk sõltumatuks muutujaks ja elementi y nimetatakse sõltuvaks muutujaks.</p>
+        </div>
+        <div class="def"><p><b>Definitsioon 8.1.2.</b> Funktsiooni `f` nimetatakse ülalt tõkestatuks funktsiooniks hulgal `X_1 sub X`, kui leidub selline reaalarv `m`, et iga `x in X_1` korral kehtib võrratus `m<=f(x)`. Funktsiooni `f`, mis on nii alt kui ka ülalt tõkestatud hulgal `X_1`, nimetatakse <i>tõkestatud funktsiooniks</i> hulgal `X_1`.</p>
+        <p>Funktsioon `y=f(x)` (`x in X`) on määratud, kui on antud tema määramispiirkond `X` ja on teada vastavust määrav eeskiri `f`.</p></div>
+        <p>Näited:</p>
+        <p>alt tõkestatud: `y=x^2`</p>
+        <img class="img-fluid" src="2019-01-13-20-29-50.png" alt="">
+        <p>ülalt tõkestatud: `y=-x^2`</p>
+        <img class="img-fluid" src="2019-01-13-20-30-20.png" alt="">
+        <h2>Funktsiooni põhilised esitusviisid. Tuua näiteid</h2>
+        <h3>Analüütiline esitus valemite abil</h3>
+        <h4>Funktsiooni ilmutatud kuju `y=f(x)`</h4>
+        <p>Funktsiooni esitatakse ilmutatud kujul võrdusena `y=f(x)`, kus vasakul pool võrdusmärki on `y` ja paremal mingisugune analüütiline avaldis muutuja `x` suhtes. Vajadusel lisatakse ka määramispiirkonna kirjeldus. Näiteks avaldis</p>
+        `y=ln(x^2-9) + 1`, `x in [-3;3]`
+        <p>kirjeldab ilmutatud kujul antud funktsiooni, mille määramispiirkonnaks on lõik `[-3; 3]` ja iga `x` korral sellelt lõigult arvutatakse argumendile `x` vastavad funktsiooni väärtused `f(x)` vastavalt funktsioonile `y=ln(x^2-9)+1`.</p>
+        <h4>Funktsiooni ilmutamata kuju `F(x,y)=0`</h4>
+        <div class="def"><p><b>Definitsioon 8.2.1.</b> Öeldakse, et funktsioon `y=f(x)` (`x in X`) on esitatud võrrandi `F(x, y)=0` abil ilmutamata kujul, kui iga `x in X` korral `F(x, f(x))=0`.</p>
+        </div>
+        <p>Ilmutamata kujul antud funktsiooni ilmutamiseks tuleb lahendada võrrand muutuja `y` suhtes.</p>
+        <p>Näiteks funktsioon</p>
+        `x^2+y^2-16=0`
+        <p>esitab ilmutatud kujul funktsioone</p>
+        `y=sqrt(16-x^2)`<br>
+        `y=-sqrt(16-x^2)`
+        <p>Iga ilmutamata kujul antud funktsiooni ei ole võimalik esitada ilmutatud kujul, st kujul `y=f(x)`. Näiteks võrrandit `y^2-x+sin(y) = 0` ei õnnestu lahendada muutuja `y` suhtes.</p>
+        <p>Iga ilmutatud funktsioon `y=f(x)` on esitatav ilmutamata kujul `y-f(x)=0`. Näiteks ilmutatud funktsioon `y=cos x` ilmutamata kuju on `y-cos x = 0`.</p>
+        <h4>Funktsiooni parameetriline kuju</h4>
+        <p>Funktsiooni `f` parameetriline kuju</p>
+        `{(x=x(t)),(y=y(t)):}\ t in T sub R`
+        <p>Muutujat `t` nimetatakse parameetriks.</p>
+        <p>Iga funktsiooni `y=sqrt(x+2)` esitus parameetrilisel kujul on</p>
+        `{(t=x+2),(y=sqrt(t)):}`<br>
+        <h3>Funktsiooni geomeetriline esitus graafiku abil</h3>
+        <p>Funktsioon esitatakse graafikuna tasandil ristkoordinaadistikus.</p>
+        <div class="def"><p><b>Definitsioon 8.2.2.</b> Funktsiooni `f` graafikuks nimetatakse <i>xy</i>-tasandi punktide hulka</p>
+        `Gamma(f)={(x,y):\ y=f(x),\ x in X}`.
+        <p>Paari `(x,y) in R` nimetatakse graafiku punktiks.</p>
+        </div>
+        <h3>Funktsiooni numbriline esitus tabeli abil</h3>
+        <p>Funktsiooni argumendi võimalikud väärtused esitatakse tabeli ühes reas (veerus) ja neile vastavad funktsiooni väärtused tabeli teises reas (veerus)</p>
+        <table>
+          <tr>
+            <td>`x`</td>
+            <td>`x_0`</td>
+            <td>`x_1`</td>
+            <td>...</td>
+            <td>`x_n`</td>
+          </tr>
+          <tr>
+            <td>`y`</td>
+            <td>`f(x_0)`</td>
+            <td>`f(x_1)`</td>
+            <td>...</td>
+            <td>`f(x_n)`</td>
+          </tr>
+        </table>
+        <p>Näited:</p>
+        <p>ilmutatud kuju: `y=x^2`</p>
+        <p>ilmutamata kuju: `y-x^2=0`</p>
+        <p>parameetriline kuju: `{(x=t^2),(y=2t):}`</p>
+        <h2>Paaris ja paaritu funktsioon</h2>
+        <div class="def"><p><b>Definitsioon 8.3.1.</b> Funktsiooni `y=f(x)` nimetatakse <i>paarisfunktsiooniks</i> määramispiirkonnas `X`, kui</p>
+        `f(-x)=f(x)`<br>
+        `forall x in X`
+        <p>Funktsiooni `y=f(x)` nimetatakse <i>paarituks funktsiooniks</i> määramispiirkonnas `X`, kui</p>
+        `f(-x)=-f(x)`
+        `forall x in X`
+        </div>
+        <p>Paarisfunktsiooni graafik on sümmeetriline <i>y</i>-telje suhtes ja paaritu funktsiooni graafik on sümmeetriline
+        nullpunkti suhtes.</p>
+        <p>Näiteks paarisfunktsioonid on `y=x^2`, `y=|x|` ja `y=cosx`. Paaritud funktsioonid on näiteks `y=sin x`, `y=tan x` ning `y=x^3`.</p>
+        <h2>Perioodiline funktsioon</h2>
+        <div class="def"><p><b>Definitsioon 8.3.2.</b> Funktsiooni `f` nimetatakse <i>perioodiliseks</i>, kui leidub selline arv `omega ne 0`, et iga `x in X` korral ka `x pm omega in X` ja `f(x+ omega)=f(x)`. Vähimat positiivset arvu `omega`, mille korral `f(x + omega) = f(x)` iga `x in X` korral, nimetatakse funktsiooni `f(x)` perioodiks.</p></div>
+        <p>Näiteks trigonomeetrilised funktsioonid on perioodilised.</p>
+        <h2>Monotoonselt kasvav/kahanev funktsioon</h2>
+        <div class="def"><p><b>Definitsioon.</b> Funktsiooni `f` määramispiirkonnaga X nimetatakse kasvavaks (kahanevaks) hulgas `S sub X`, kui iga `x_1, x_2 in S` korral alati sellest, et `x_1 < x_2` järeldub, et `f(x_1) < f(x_2)` (kahaneva puhul `f(x_1) > f(x_2)`)</p></div>
+        <p>Funktsiooni `f`, mis rahuldab tingimust</p>
+        `x_1 < x_2\ \ =>\ \ f(x_1)<=f(x_2)\ \ forall x_1, x_2 in S`
+        <p>nimeatakse <i>monotoonselt kasvavaks hulgas `S`</i>.</p>
+        <p>Funktsiooni `f`, mis aga rahuldab tingimust</p>
+        `x_1 < x_2\ \=>\ \ f(x_1)>=f(x_2)\ \ forall x_1, x_2 in S`
+        <p>nimetakse <i>monotoonselt kahanevaks hulgas `S`</i>.</p>
+        <p>Funktsiooni nimetatakse <i>monotoonseks</i> hulgas `S`, kui ta on kas monotoonselt kasvava või monotoonselt kahanev selles hulgas.</p>
+        <h2>Pöördfunktsioon. Pöördfunktsiooni leidmine</h2>
+        <p>Me ütleme, et funktsioon `f` on <i>üksühene</i>, kui tema määramispiirkonnas ei leidu kaht erinevat punkti `x_1` ja `x_2`, mille korral `f(x_1) = f(x_2)`. Seega funktsioon `f` on üksühene, kui suvaliste määramispiirkonna punktide `x_1` ja `x_2` korral sellest, et `x_1 ne x_2`, järeldub `f(x_1) ne f(x_2).</p>
+        <p>Näiteks funktsioon `y=sin x`, `x in [-pi/2, pi/2]` on üksühene, kuid see funktsioon ei ole üksühene kogu reaalarvude hulga.</p>
+        <div class="def"><p><b>Definitsioon 8.4.1.</b> Kui iga arvu `y in Y sub R` korral leidub ainult pks arv `x in X sub R`, mille korral `y=f(x)`, siis öeldakse, et funktsioonil `f` on olemas <i>pöördfunktsioon</i></p>
+        `x=f^-1(y)`<br>
+        (`y in Y`),
+        <p>muutumispiirkonnaga `X`. Kui funktsiooni muutumispiirkond on tõkestatud hulk, siis nimetatakse funktsiooni tõkestatud funktsiooniks.</p>
+        <p>Seega kui funktsioonil `f` on olemas pöördfunktsioon `f^-1(y)`, siis funktsioon `f` korraldab üksühese vastavuse piirkondade `X` ja `Y` vahel. Funktsiooni muutumispiirkonna leidmiseks tuleb leida funktsiooni pöördfunktsioon ja seejärel selle määramispiirkond.</p>
+        <p>Funktsiooni `y=f(x)` pöördfunktsiooni `x=f^-1(y)` leidmiseks tuleb</p>
+        <ol>
+          <li>avaldada võrrandist `y=f(x)` muutuja `x` muutuja `y` kaudu</li>
+          <li>vahetada tähised `x` ja `y`.</li>
+        </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

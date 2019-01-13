@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin-top: 3rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+td {
+  padding: 5px 5px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: center; 
+}
+
+img {
+  image-rendering: crisp-edges;
+}
+
+img {
+  max-height: 86vh;
+}
+
+.mjx-chtml {
+  margin-bottom: 30px;
+}
+
+.MathJax {
+  font-size: 0.1rem;
+}
+
+.def {
+  background-color: rgba(25, 35, 46, 0.03);
+  padding: 30px;
+}
+
+.def:hover {
+  background-color: rgba(25, 35, 46, 0.1);
+  padding: 30px;
+}
+
+p {
+  line-height: 170%;
+}
+
+p > .mjx-chtml {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+p:hover, li:hover {
+  background-color: rgba(25, 100, 46, 0.1);
+}
+
+body {
+  counter-reset: section;
+}
+
+h1 {
+  counter-reset: subsection;
+}
+
+h2 {
+  counter-reset: subsection3;
+}
+
+h3 {
+  counter-reset: subsection4;
+}
+
+h1:before {
+  counter-increment: section;
+  content: "Peatükk " counter(section) ". ";
+  font-weight: bold;
+}
+
+h2:before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+
+h3:before {
+  counter-increment: subsection3;
+  content: counter(section) "." counter(subsection) "." counter(subsection3) " ";
+}
+
+h4:before {
+  counter-increment: subsection4;
+  content: counter(section) "." counter(subsection) "." counter(subsection3) "." counter(subsection4) " ";
+}
