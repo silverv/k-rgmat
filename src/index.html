@@ -15,10 +15,11 @@
 <body>
   <div class="container">
     <div class="row">
+      <div class="col-lg-2">Kasutusel <a href="https://www.mathjax.org/">MathJax</a> ja <a href="https://getbootstrap.com/">Bootstrap 4</a></div>
       <div class="col">
         <p>Õpilase konspekt</p>
-        <p>Materjali autor: õppejõud Annemai Raidjõe 2019, <a href="https://moodle.hitsa.ee">allikas</a></p>
-        <p>Matemaatika arengu huvides lähtekood avalik: <a href="https://github.com/silverv/k-rgmat">github</a></p>
+        <p>õppejõud Annemai Raidjõe 2019 materjal</p>
+        <p>lähtekood avalik: <a href="https://github.com/silverv/k-rgmat">github</a></p>
         <h1>Kompleksarvud</h1>
         <p>Laiendades reaalarvude hulka `R` arvuga, mille ruut on võrdne -1, saame kompleksarvude hulga. Kompleksarvude
           hulka tähistatakse tähega C.</p>
@@ -217,6 +218,41 @@
         <p>Sel juhul kirjutatakse</p>
         `lim_(x->infty) f(x) = A` `\ \ \ (lim_(x->-infty) f(x) = A)`
         </div>
+        <h2>Funktsiooni piirväärtuse omadused</h2>
+        <div class="def"><p><b>Definitsioon 9.2.1.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a`, kui leiduvad arvud `M>0` ja `delta > 0` nii, et</p>
+        `|f(x)|<= M` `\ \ \ forall x in (a - delta, a+ delta)\\{a}`.
+        </div>
+        <div class="def">
+          <p><b>Definitsioon 9.2.2.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a+`, kui leiduvad arvud `M>0`
+            ja `delta > 0` nii, et</p> 
+            `|f(x)|<= M` `\ \ \ forall x in (a, a+ delta)`.
+        </div>
+        <div class="def">
+          <p><b>Definitsioon 9.2.3.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a-`, kui leiduvad arvud `M>0`
+            ja `delta > 0` nii, et</p> 
+            `|f(x)|<= M` `\ \ \ forall x in (a - delta, a)`.
+        </div>
+        <div class="def">
+          <p><b>Definitsioon 9.2.4.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->infty`, kui leiduvad arvud `M>0`
+            ja `N > 0` nii, et</p> 
+            `|f(x)|<= M` `\ \ \ forall x > N`. 
+        </div>
+        <div class="def">
+          <p><b>Definitsioon 9.2.5.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->-infty`, kui leiduvad arvud
+            `M>0` ja `N > 0` nii, et</p> `|f(x)|<= M` `\ \ \ forall x< -N`.
+        </div>
+        <p><b>Omadus 9.2.1.</b> Kui funktsioon `f` on antud protsessis lõplik piirväärtus, siis on ta selles protsessis tõkestatud.</p>
+        <p><b>Omadus 9.2.2.</b> (piirväätuste ühesus). Vaadeldavas protsessis saab funktsioonil olla ainult üks piirväärtus.</p>
+        <p><b>Omadus 9.2.3.</b> (piirväärtuse monotoonsuse omadus). Kui leidub `delta_0 > 0` nii, et iga `x in (x-delta_0, x+delta_0)\\{a}` korral kehtib `f(x) <= g(x)` ning eksisteerivad piirväärtused `lim_(x->a) f(x) = A` ja `lim_(x->a) g(x)=B`, siis `A<= B`.</p>
+        <p><b>Omadus 9.2.4.</b> (piirväärtuse keskmise muutuja omadus). Kui leidub `delta_0>0` nii, et iga `x in (x-delta_0, x+delta_0)\\{a}` korral kehtib `f(x) <= h(x) <= g(x)` ja leiduvad piirväärtused `lim_(x->a) f(x) = lim_(x->a) g(x) = A`, siis on funktsioonil h piirväärtus protsessis `x->a` ning `lim_(x->a) h(x)=A`.</p>
+        <p>Funktsiooni piirväärtusel on järgmised aritmeetiliste tehetega seotud omadused:</p>
+        <p>kui on olemas lõplikud piirväärtused `lim f(x)` ja `lim g(x)`, siis</p>
+        <ol>
+          <li>`lim c*f(x)=c*lim f(x)\ \ \ (c-const)`</li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
       </div>
     </div>
   </div>
