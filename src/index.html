@@ -10,20 +10,28 @@
   <link rel="stylesheet" href="main.css">
   <script src="../node_modules/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <script src="../node_modules/mathjax/extensions/MathZoom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-2">Kasutusel <a href="https://www.mathjax.org/">MathJax</a>, <a href="https://getbootstrap.com/">Bootstrap 4</a> ja <a href="http://asciimath.org/">AsciiMath</a></div>
-      <div class="col">
+      <div class="col-md-2">
+        <div class="sticky-top js-toc">
+
+        </div>
+      </div>
+      <div class="col js-toc-content">
         <p>Õpilase konspekt</p>
         <p>õppejõud Annemai Raidjõe 2019 materjal</p>
         <p>lähtekood avalik: <a href="https://github.com/silverv/k-rgmat">github</a></p>
-        <h1>Kompleksarvud</h1>
+        Kasutusel <a href="https://www.mathjax.org/">MathJax</a>, <a href="https://getbootstrap.com/">Bootstrap 4</a> ja <a
+          href="http://asciimath.org/">AsciiMath</a>. Sisukorra tegi <a href="https://tscanlin.github.io/tocbot/">Tocbot</a>
+        <h1 id="kompleksarvud">Kompleksarvud</h1>
         <p>Laiendades reaalarvude hulka `R` arvuga, mille ruut on võrdne -1, saame kompleksarvude hulga. Kompleksarvude
           hulka tähistatakse tähega C.</p>
-        <h2>Kompleksarvu definitsioon</h2>
+        <h2 id="kompleksdef">Kompleksarvu definitsioon</h2>
         <div class="def">
           <p><b>Definitsioon 1.1.1.</b> Arvu, mille ruut on -1 nimetatakse imaginaarühikuks ja tähistatakse sümboliga
             `i`</p> `i = sqrt(-1)` <p>imaginaarühiku abil saab esitada juuri negatiivsetest arvudest. Näiteks</p>
@@ -36,7 +44,7 @@
           <p>Arvu `a` nimetatakse kompleksarvu `z=a+bi` reaalosaks ja arvu `bi` selle imaginaarosaks. Reaalosa
             tähistatakse `a=Re(z)` ja imaginaarosa tähistatakse `bi=Im(z)`</p>
         </div>
-        <h2>Kompleksarvu kujutamine komplekstasandil</h2>
+        <h2 id="komplekstasand">Kompleksarvu kujutamine komplekstasandil</h2>
         <p>Kompleksarv `z=a+bi` sõltub kahest reaalarvulisest parameetrist `a` ja `b`, kus `a` ja `b` võivad omandada
           mistahes reaalarvulisi väärtusi. Seetõttu võib kompleksarvu kujutada ka järjestatud paarina `(a;b)`, millele
           vastab komplekstasandil punkt `A=(a;b)`</p>
@@ -46,7 +54,7 @@
           Kompleksarvu reaalosa kujutatakse x-teljel ja imaginaarosa kujutatakse y-teljel. Seepärast nimetatakse
           x-telge reaalteljeks ja y-telge imaginaarteljeks.</p>
         <img class="img-fluid" src="2019-01-06-12-14-03.png" alt="" srcset="">
-        <h2>Kompleksarvu algebraline kuju</h2>
+        <h2 id="algebraline">Kompleksarvu algebraline kuju</h2>
         <p>Kompleksarvudel on mitmeid erinevaid esitusviise ehk kujusid. Kõige levinum on kompleksarvu algebraline
           kuju.</p>
         <div class="def">
@@ -54,64 +62,85 @@
             algebraliseks ehk Descartes'i kujuks.</p>
         </div>
         <div class="def">
-          <p><b>Definitsioon 1.3.2.</b> Kompleksarvu `z=a+bi` mooduliks nimetatakse reaalarvu |z|, mis leitakse seosega:</p>
-          `|z|=sqrt(a^2+b^2)`
-          <p>Moodul `|z|>=0` on reaalarv ja kujutab endast komplekstasandil asuva punkti `A=(a;b)` kaugust nullpunktist.</p>
+          <p><b>Definitsioon 1.3.2.</b> Kompleksarvu `z=a+bi` mooduliks nimetatakse reaalarvu |z|, mis leitakse
+            seosega:</p> `|z|=sqrt(a^2+b^2)` <p>Moodul `|z|>=0` on reaalarv ja kujutab endast komplekstasandil asuva
+            punkti `A=(a;b)` kaugust nullpunktist.</p>
           <img class="img-fluid" src="2019-01-06-12-47-25.png" alt="">
-          <p>Jooniselt on näha, et kompleksarvu moodul leitakse Pythagorase teoreemi abil. Näiteks kompleksarvu `z=3+4i` moodul on `|z|=|3+4i|=sqrt(3^2+4^2)=5`.</p>
+          <p>Jooniselt on näha, et kompleksarvu moodul leitakse Pythagorase teoreemi abil. Näiteks kompleksarvu
+            `z=3+4i` moodul on `|z|=|3+4i|=sqrt(3^2+4^2)=5`.</p>
         </div>
         <div class="def">
-          <p><b>Definitsioon 1.3.3.</b> Kompleksarvu `z=a+bi` kaaskompleksarvuks ehk kaaskompleksiks nimetatakse kompleksarvu</p>
-          `bar z = a - bi`
-          <p>Kaaskompleksarv `bar z` asub arvuga `z` nullpunktist võrdsel kaugusel ning `z` ja `bar z` on sümmeetrilised reaaltelje suhtes.</p>
+          <p><b>Definitsioon 1.3.3.</b> Kompleksarvu `z=a+bi` kaaskompleksarvuks ehk kaaskompleksiks nimetatakse
+            kompleksarvu</p> `bar z = a - bi` <p>Kaaskompleksarv `bar z` asub arvuga `z` nullpunktist võrdsel kaugusel
+            ning `z` ja `bar z` on sümmeetrilised reaaltelje suhtes.</p>
           <img class="img-fluid" src="2019-01-06-12-51-21.png" alt="">
         </div>
-        <h1>Funktsioon. Piirväärtus</h1>
-        <h2>Funktsiooni mõiste. Ülalt ja alt tõkestatud funktsioon. Tuua näiteid.</h2>
+        <p>Näiteks kompleksarvu `z=1-5i` Kaaskompleksarv on `bar z = 1 + 5i`</p>
+        <p>Kompleksarvu `z` ja tema kaaskompleksarvu `bar z` vahel kehtivad järgmised seosed:</p>
+        <ol>
+          <li>`|z|=|bar z|` <p>Tõestus:</p> `|z|=sqrt(a^2+b^2)`<br> `|bar z| = sqrt(a^2 (-b)^2)=sqrt(a^2+b^2)` </li>
+          <li>`z * bar z = |z|^2` <p>Tõestus:</p> `(a+ib)(a-ib)=a^2-(i)^2*b^2=a^2+b^2=|z|^2` </li>
+          <li>`bar bar z = z` <p>Tõestus:</p> `bar bar z = bar(())` </li>
+          <li>`bar (z_1 pm z_2) = bar z_1 pm bar z_2` <p>Tõestus</p> `bar (z_1 pm z_2) ` `= (a_1 + a_2) - (b_1 + b_2)i`
+            `a_1+a_2-b_1*i-b_2*i=` `ubrace((a_1 -b_1*i))_(bar z_1)+ubrace((a_2-b_2*i))_(bar z_2)` </li>
+          <li>`bar (z_1 * z_2) = bar z_1 * bar z_2`</li>
+        </ol>
+        <h1 id="funktsioon">Funktsioon. Piirväärtus</h1>
+        <h2 id="funktsioondef">Funktsiooni mõiste. Ülalt ja alt tõkestatud funktsioon. Tuua näiteid.</h2>
         <div class="def">
-          <p><b>Definitsioon 8.1.1.</b> Kui hulga `X sub R` igale elemendile `x` on vastavusse seatud element `y` hulgast `X`, siis öeldakse, et hulgal `X` on määratud (ühene) <i>funktsioon</i> `f` ja seda vastavust tähistatakse `y=f(x)` (`x in X`). Kõikide elementide hulka `x in X`, mille puhul funktsioon `f(x)` on määratud nimetatakse funktsiooni `f` <i>määramispiirkonnaks</i>. Funktsiooni `f` kõikide väärtuste hulka</p>
-          `Y = {y:\ y= f(x), x in X}`
-          <p>nimetatakse funktsiooni `f` <i>muutumispiirkonnaks ehk väärtuste hulgaks</i>.</p>
-          <p>Elementi x nimetatakse funktsiooni `f` argumendiks ehk sõltumatuks muutujaks ja elementi y nimetatakse sõltuvaks muutujaks.</p>
+          <p><b>Definitsioon 8.1.1.</b> Kui hulga `X sub R` igale elemendile `x` on vastavusse seatud element `y`
+            hulgast `X`, siis öeldakse, et hulgal `X` on määratud (ühene) <i>funktsioon</i> `f` ja seda vastavust
+            tähistatakse `y=f(x)` (`x in X`). Kõikide elementide hulka `x in X`, mille puhul funktsioon `f(x)` on
+            määratud nimetatakse funktsiooni `f` <i>määramispiirkonnaks</i>. Funktsiooni `f` kõikide väärtuste hulka</p>
+          `Y = {y:\ y= f(x), x in X}` <p>nimetatakse funktsiooni `f` <i>muutumispiirkonnaks ehk väärtuste hulgaks</i>.</p>
+          <p>Elementi x nimetatakse funktsiooni `f` argumendiks ehk sõltumatuks muutujaks ja elementi y nimetatakse
+            sõltuvaks muutujaks.</p>
         </div>
-        <div class="def"><p><b>Definitsioon 8.1.2.</b> Funktsiooni `f` nimetatakse ülalt tõkestatuks funktsiooniks hulgal `X_1 sub X`, kui leidub selline reaalarv `m`, et iga `x in X_1` korral kehtib võrratus `m<=f(x)`. Funktsiooni `f`, mis on nii alt kui ka ülalt tõkestatud hulgal `X_1`, nimetatakse <i>tõkestatud funktsiooniks</i> hulgal `X_1`.</p>
-        <p>Funktsioon `y=f(x)` (`x in X`) on määratud, kui on antud tema määramispiirkond `X` ja on teada vastavust määrav eeskiri `f`.</p></div>
+        <div class="def">
+          <p><b>Definitsioon 8.1.2.</b> Funktsiooni `f` nimetatakse ülalt tõkestatuks funktsiooniks hulgal `X_1 sub X`,
+            kui leidub selline reaalarv `m`, et iga `x in X_1` korral kehtib võrratus `m<=f(x)`. Funktsiooni `f`, mis
+              on nii alt kui ka ülalt tõkestatud hulgal `X_1`, nimetatakse <i>tõkestatud funktsiooniks</i> hulgal
+              `X_1`.</p>
+          <p>Funktsioon `y=f(x)` (`x in X`) on määratud, kui on antud tema määramispiirkond `X` ja on teada vastavust
+            määrav eeskiri `f`.</p>
+        </div>
         <p>Näited:</p>
         <p>alt tõkestatud: `y=x^2`</p>
         <img class="img-fluid" src="2019-01-13-20-29-50.png" alt="">
         <p>ülalt tõkestatud: `y=-x^2`</p>
         <img class="img-fluid" src="2019-01-13-20-30-20.png" alt="">
-        <h2>Funktsiooni põhilised esitusviisid. Tuua näiteid</h2>
-        <h3>Analüütiline esitus valemite abil</h3>
-        <h4>Funktsiooni ilmutatud kuju `y=f(x)`</h4>
-        <p>Funktsiooni esitatakse ilmutatud kujul võrdusena `y=f(x)`, kus vasakul pool võrdusmärki on `y` ja paremal mingisugune analüütiline avaldis muutuja `x` suhtes. Vajadusel lisatakse ka määramispiirkonna kirjeldus. Näiteks avaldis</p>
-        `y=ln(x^2-9) + 1`, `x in [-3;3]`
-        <p>kirjeldab ilmutatud kujul antud funktsiooni, mille määramispiirkonnaks on lõik `[-3; 3]` ja iga `x` korral sellelt lõigult arvutatakse argumendile `x` vastavad funktsiooni väärtused `f(x)` vastavalt funktsioonile `y=ln(x^2-9)+1`.</p>
-        <h4>Funktsiooni ilmutamata kuju `F(x,y)=0`</h4>
-        <div class="def"><p><b>Definitsioon 8.2.1.</b> Öeldakse, et funktsioon `y=f(x)` (`x in X`) on esitatud võrrandi `F(x, y)=0` abil ilmutamata kujul, kui iga `x in X` korral `F(x, f(x))=0`.</p>
+        <h2 id="funktsioonesitus">Funktsiooni põhilised esitusviisid. Tuua näiteid</h2>
+        <h3 id="analytic">Analüütiline esitus valemite abil</h3>
+        <h4 id="ilmutatudKuju">Funktsiooni ilmutatud kuju `y=f(x)`</h4>
+        <p>Funktsiooni esitatakse ilmutatud kujul võrdusena `y=f(x)`, kus vasakul pool võrdusmärki on `y` ja paremal
+          mingisugune analüütiline avaldis muutuja `x` suhtes. Vajadusel lisatakse ka määramispiirkonna kirjeldus.
+          Näiteks avaldis</p> `y=ln(x^2-9) + 1`, `x in [-3;3]` <p>kirjeldab ilmutatud kujul antud funktsiooni, mille
+          määramispiirkonnaks on lõik `[-3; 3]` ja iga `x` korral sellelt lõigult arvutatakse argumendile `x` vastavad
+          funktsiooni väärtused `f(x)` vastavalt funktsioonile `y=ln(x^2-9)+1`.</p>
+        <h4 id="ilmutamataKuju">Funktsiooni ilmutamata kuju `F(x,y)=0`</h4>
+        <div class="def">
+          <p><b>Definitsioon 8.2.1.</b> Öeldakse, et funktsioon `y=f(x)` (`x in X`) on esitatud võrrandi `F(x, y)=0`
+            abil ilmutamata kujul, kui iga `x in X` korral `F(x, f(x))=0`.</p>
         </div>
         <p>Ilmutamata kujul antud funktsiooni ilmutamiseks tuleb lahendada võrrand muutuja `y` suhtes.</p>
-        <p>Näiteks funktsioon</p>
-        `x^2+y^2-16=0`
-        <p>esitab ilmutatud kujul funktsioone</p>
-        `y=sqrt(16-x^2)`<br>
-        `y=-sqrt(16-x^2)`
-        <p>Iga ilmutamata kujul antud funktsiooni ei ole võimalik esitada ilmutatud kujul, st kujul `y=f(x)`. Näiteks võrrandit `y^2-x+sin(y) = 0` ei õnnestu lahendada muutuja `y` suhtes.</p>
-        <p>Iga ilmutatud funktsioon `y=f(x)` on esitatav ilmutamata kujul `y-f(x)=0`. Näiteks ilmutatud funktsioon `y=cos x` ilmutamata kuju on `y-cos x = 0`.</p>
-        <h4>Funktsiooni parameetriline kuju</h4>
-        <p>Funktsiooni `f` parameetriline kuju</p>
-        `{(x=x(t)),(y=y(t)):}\ t in T sub R`
-        <p>Muutujat `t` nimetatakse parameetriks.</p>
-        <p>Iga funktsiooni `y=sqrt(x+2)` esitus parameetrilisel kujul on</p>
-        `{(t=x+2),(y=sqrt(t)):}`<br>
-        <h3>Funktsiooni geomeetriline esitus graafiku abil</h3>
+        <p>Näiteks funktsioon</p> `x^2+y^2-16=0` <p>esitab ilmutatud kujul funktsioone</p> `y=sqrt(16-x^2)`<br>
+        `y=-sqrt(16-x^2)` <p>Iga ilmutamata kujul antud funktsiooni ei ole võimalik esitada ilmutatud kujul, st kujul
+          `y=f(x)`. Näiteks võrrandit `y^2-x+sin(y) = 0` ei õnnestu lahendada muutuja `y` suhtes.</p>
+        <p>Iga ilmutatud funktsioon `y=f(x)` on esitatav ilmutamata kujul `y-f(x)=0`. Näiteks ilmutatud funktsioon
+          `y=cos x` ilmutamata kuju on `y-cos x = 0`.</p>
+        <h4 id="parameetrilineKuju">Funktsiooni parameetriline kuju</h4>
+        <p>Funktsiooni `f` parameetriline kuju</p> `{(x=x(t)),(y=y(t)):}\ t in T sub R` <p>Muutujat `t` nimetatakse
+          parameetriks.</p>
+        <p>Iga funktsiooni `y=sqrt(x+2)` esitus parameetrilisel kujul on</p> `{(t=x+2),(y=sqrt(t)):}`<br>
+        <h3 id="geomeetrilineEsitus">Funktsiooni geomeetriline esitus graafiku abil</h3>
         <p>Funktsioon esitatakse graafikuna tasandil ristkoordinaadistikus.</p>
-        <div class="def"><p><b>Definitsioon 8.2.2.</b> Funktsiooni `f` graafikuks nimetatakse <i>xy</i>-tasandi punktide hulka</p>
-        `Gamma(f)={(x,y):\ y=f(x),\ x in X}`.
-        <p>Paari `(x,y) in R` nimetatakse graafiku punktiks.</p>
+        <div class="def">
+          <p><b>Definitsioon 8.2.2.</b> Funktsiooni `f` graafikuks nimetatakse <i>xy</i>-tasandi punktide hulka</p>
+          `Gamma(f)={(x,y):\ y=f(x),\ x in X}`. <p>Paari `(x,y) in R` nimetatakse graafiku punktiks.</p>
         </div>
-        <h3>Funktsiooni numbriline esitus tabeli abil</h3>
-        <p>Funktsiooni argumendi võimalikud väärtused esitatakse tabeli ühes reas (veerus) ja neile vastavad funktsiooni väärtused tabeli teises reas (veerus)</p>
+        <h3 id="numeric">Funktsiooni numbriline esitus tabeli abil</h3>
+        <p>Funktsiooni argumendi võimalikud väärtused esitatakse tabeli ühes reas (veerus) ja neile vastavad
+          funktsiooni väärtused tabeli teises reas (veerus)</p>
         <table>
           <tr>
             <td>`x`</td>
@@ -132,144 +161,205 @@
         <p>ilmutatud kuju: `y=x^2`</p>
         <p>ilmutamata kuju: `y-x^2=0`</p>
         <p>parameetriline kuju: `{(x=t^2),(y=2t):}`</p>
-        <h2>Paaris ja paaritu funktsioon</h2>
-        <div class="def"><p><b>Definitsioon 8.3.1.</b> Funktsiooni `y=f(x)` nimetatakse <i>paarisfunktsiooniks</i> määramispiirkonnas `X`, kui</p>
-        `f(-x)=f(x)`<br>
-        `forall x in X`
-        <p>Funktsiooni `y=f(x)` nimetatakse <i>paarituks funktsiooniks</i> määramispiirkonnas `X`, kui</p>
-        `f(-x)=-f(x)`
-        `forall x in X`
+        <h2 id="paarisPaaritu">Paaris ja paaritu funktsioon</h2>
+        <div class="def">
+          <p><b>Definitsioon 8.3.1.</b> Funktsiooni `y=f(x)` nimetatakse <i>paarisfunktsiooniks</i> määramispiirkonnas
+            `X`, kui</p> `f(-x)=f(x)`<br> `forall x in X` <p>Funktsiooni `y=f(x)` nimetatakse <i>paarituks
+              funktsiooniks</i> määramispiirkonnas `X`, kui</p> `f(-x)=-f(x)` `forall x in X`
         </div>
-        <p>Paarisfunktsiooni graafik on sümmeetriline <i>y</i>-telje suhtes ja paaritu funktsiooni graafik on sümmeetriline
-        nullpunkti suhtes.</p>
-        <p>Näiteks paarisfunktsioonid on `y=x^2`, `y=|x|` ja `y=cosx`. Paaritud funktsioonid on näiteks `y=sin x`, `y=tan x` ning `y=x^3`.</p>
-        <h2>Perioodiline funktsioon</h2>
-        <div class="def"><p><b>Definitsioon 8.3.2.</b> Funktsiooni `f` nimetatakse <i>perioodiliseks</i>, kui leidub selline arv `omega ne 0`, et iga `x in X` korral ka `x pm omega in X` ja `f(x+ omega)=f(x)`. Vähimat positiivset arvu `omega`, mille korral `f(x + omega) = f(x)` iga `x in X` korral, nimetatakse funktsiooni `f(x)` perioodiks.</p></div>
+        <p>Paarisfunktsiooni graafik on sümmeetriline <i>y</i>-telje suhtes ja paaritu funktsiooni graafik on
+          sümmeetriline nullpunkti suhtes.</p>
+        <p>Näiteks paarisfunktsioonid on `y=x^2`, `y=|x|` ja `y=cosx`. Paaritud funktsioonid on näiteks `y=sin x`,
+          `y=tan x` ning `y=x^3`.</p>
+        <h2 id="periodic">Perioodiline funktsioon</h2>
+        <div class="def">
+          <p><b>Definitsioon 8.3.2.</b> Funktsiooni `f` nimetatakse <i>perioodiliseks</i>, kui leidub selline arv
+            `omega ne 0`, et iga `x in X` korral ka `x pm omega in X` ja `f(x+ omega)=f(x)`. Vähimat positiivset arvu
+            `omega`, mille korral `f(x + omega) = f(x)` iga `x in X` korral, nimetatakse funktsiooni `f(x)` perioodiks.</p>
+        </div>
         <p>Näiteks trigonomeetrilised funktsioonid on perioodilised.</p>
-        <h2>Monotoonselt kasvav/kahanev funktsioon</h2>
-        <div class="def"><p><b>Definitsioon.</b> Funktsiooni `f` määramispiirkonnaga X nimetatakse kasvavaks (kahanevaks) hulgas `S sub X`, kui iga `x_1, x_2 in S` korral alati sellest, et `x_1 < x_2` järeldub, et `f(x_1) < f(x_2)` (kahaneva puhul `f(x_1) > f(x_2)`)</p></div>
-        <p>Funktsiooni `f`, mis rahuldab tingimust</p>
-        `x_1 < x_2\ \ =>\ \ f(x_1)<=f(x_2)\ \ forall x_1, x_2 in S`
-        <p>nimetakse <i>monotoonselt kasvavaks hulgas `S`</i>.</p>
-        <p>Funktsiooni `f`, mis aga rahuldab tingimust</p>
-        `x_1 < x_2\ \=>\ \ f(x_1)>=f(x_2)\ \ forall x_1, x_2 in S`
-        <p>nimetakse <i>monotoonselt kahanevaks hulgas `S`</i>.</p>
-        <p>Funktsiooni nimetatakse <i>monotoonseks</i> hulgas `S`, kui ta on kas monotoonselt kasvava või monotoonselt kahanev selles hulgas.</p>
-        <h2>Pöördfunktsioon. Pöördfunktsiooni leidmine</h2>
-        <p>Me ütleme, et funktsioon `f` on <i>üksühene</i>, kui tema määramispiirkonnas ei leidu kaht erinevat punkti `x_1` ja `x_2`, mille korral `f(x_1) = f(x_2)`. Seega funktsioon `f` on üksühene, kui suvaliste määramispiirkonna punktide `x_1` ja `x_2` korral sellest, et `x_1 ne x_2`, järeldub `f(x_1) ne f(x_2).</p>
-        <p>Näiteks funktsioon `y=sin x`, `x in [-pi/2, pi/2]` on üksühene, kuid see funktsioon ei ole üksühene kogu reaalarvude hulga.</p>
-        <div class="def"><p><b>Definitsioon 8.4.1.</b> Kui iga arvu `y in Y sub R` korral leidub ainult pks arv `x in X sub R`, mille korral `y=f(x)`, siis öeldakse, et funktsioonil `f` on olemas <i>pöördfunktsioon</i></p>
-        `x=f^-1(y)`<br>
-        (`y in Y`),
-        <p>muutumispiirkonnaga `X`. Kui funktsiooni muutumispiirkond on tõkestatud hulk, siis nimetatakse funktsiooni tõkestatud funktsiooniks.</p>
-        <p>Seega kui funktsioonil `f` on olemas pöördfunktsioon `f^-1(y)`, siis funktsioon `f` korraldab üksühese vastavuse piirkondade `X` ja `Y` vahel. Funktsiooni muutumispiirkonna leidmiseks tuleb leida funktsiooni pöördfunktsioon ja seejärel selle määramispiirkond.</p>
-        <p>Funktsiooni `y=f(x)` pöördfunktsiooni `x=f^-1(y)` leidmiseks tuleb</p>
-        <ol>
-          <li>avaldada võrrandist `y=f(x)` muutuja `x` muutuja `y` kaudu</li>
-          <li>vahetada tähised `x` ja `y`.</li>
-        </ol>
-        </div>
-        <h2>Tehted funktsioonidega</h2>
-        <p>Olgu `f` ja `g` funktsioonid, mis on määratud ühel ja samal hulgal `X`. Defineerime funktsioonide summa `f+g`, vahe `f-g`, korrutise `f*g` ja jagatise `f/g` järgmiste seostega</p>
-        <ol>
-          <li>`(f+g)(x)=f(x)+g(x)`</li>
-          <li>`(f-g)(x)=f(x)-g(x)`</li>
-          <li>`(f*g)(x)=f(x)*g(x)`</li>
-          <li>`(f/g)(x)=(f(x))/(g(x))`, `\ \ g(x) ne 0`</li>
-        </ol>
-        <p><b>Näide 8.5.1.</b> Leiame funktsioonide `f(x)=2x` ja `g(x)=x-1` summa, vahe, korrutise ja jagatise.</p>
-        <ol>
-          <li>`(f+g)(x)=f(x)+g(x)=2x+(x-1)=3x+1`</li>
-          <li>`(f-g)(x)=f(x)-g(x)=2x-(x-1)=x+1`</li>
-          <li>`(f*g)(x)=f(x)*g(x)`</li>
-          <li>`(f/g)(x)=(f(x))/(g(x))=(2x)/(x-1)`,`\ \ g(x) ne 0`</li>
-        </ol>
-        <h2>Liitfunktsioon. Liitfunktsiooni moodustamine</h2>
-        <p>Olgu antud kaks funktsiooni: `y=f(x)` määramispiirkonnaga `X_f` ja `z=g(y)` määramispiirkonnaga `Y_g`. Asendades suuruse `y` funktsiooni `g` avaldises `f(x)`-ga saame uue funktsiooni mille argumendiks on `x` ja sõltuvaks muutujaks `z`, kusjuures `x` ja `z` vaheline seos on antud kujul `z=g[f(x)]`. Tegemist on funktsioonide `f` ja `g` liitfunktsiooniga. Liitfunktsiooni tähistatakse `g @ f`. Seega saame kirjutada `z=(g @ f)(x)=g[f(x)]`.</p>
-        <p>Näiteks annavad funktsioonid</p>
-        `f(x)=sqrt(x+3)`
-        <p>ja</p>
-        `g(y)=ln y`
-        <p>liitfunktsiooni</p>
-        `(g @ f)(x) = ln sqrt (x+3)`. <br>
-        <h2>Funktsiooni piirväärtuse definitsioonid piirprotsessis `x->a`, `x->a+`, `x->a-`, `x-> infty`, `x->-infty`. Definitsioone osata selgitada graafiliselt.</h2>
-        <p>Olgu antud funktsioon `f`, mille määramispiirkonnaks on piirkond `X`. Olgu `a` selle piirkonna kuhjumispunkt, st selle punkti `a` igas ümbruses `(a - delta_0, a+delta_0), delta_0 > 0` leidub punktist `a` erinevaid hulga `X` punkte `(x in X, x ne a)`.</p>
-        <div class="def"><p><b>Definitsioon 9.1.1.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->a`, kui suvalise `epsilon > 0` korral leidub `delta = delta(epsilon)`, et iga `x in X` korral, mis rahuldab tingimust</p>
-        `0 < |x-a| < sigma,`
-        <p>kehtiv võrratus</p>
-        `|f(x)-A| < epsilon`.
-        <p>Tähistatakse</p>
-        `lim_(x->a) f(x)=A`.
-        <p>Vaatleme funktsiooni `f`, mille määramispiirkonnaks on `X`. Olgu `a` selle piirkonna selline kuhjumispunkt, mille mingi parempoolne ümbrus sisaldub hulgas X, st leidub `delta_0 > 0`, nii et `(a, a+ delta_0) sub X`.</p>
-        </div>
-        <div class="def"><p><b>Definitsioon 9.1.2.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->a+` `(x-> a-)`, kui suvalise `epsilon > 0` korral leidub `delta = delta(epsilon) > 0`, et iga `x in X` korral, mis rahuldab tingimust</p>
-        `0 < x -a < delta``\ \ \ (0 < a - x < delta)`,
-        <p>kehtib võrratus</p>
-        `|f(x) - A| < epsilon`.
-        <p>Tähistatakse</p>
-        `lim_(x->a+) f(x) = A``\ \ \ (lim_(x->a-) f(x)=A)`.
-        <p>Protsessi `x->a+` `(x->a-)` nimetatakse parempoolseks (vasakpoolseks) piirväärtuseks.</p>
-        </div>
-        <p><b>Omadus 9.1.1.</b> Arv `A` on funktsiooni `f` piirväärtus protsessis `x -> a` parajasti siis, kui `A` on selle funktsiooni `f` piirväärtus nii protsessis `x->a+` kui ka `x-> a-`.</p>
-        <div class="def"><p><b>Definitsioon 9.1.3.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->infty` `("või " x->-infty)` kui iga positiivse arvu `epsilon > 0` jaoks leidub selline positiivne arv `N=N(epsilon)>0`, et iga</p>
-        `x>N``\ \ \ (x < -N)``\ \ \ (x in X)`
-        <p>korral kehtib võrratus</p>
-        `|f(x)-N| < epsilon`.
-        <p>Sel juhul kirjutatakse</p>
-        `lim_(x->infty) f(x) = A` `\ \ \ (lim_(x->-infty) f(x) = A)`
-        </div>
-        <h2>Funktsiooni piirväärtuse omadused</h2>
-        <div class="def"><p><b>Definitsioon 9.2.1.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a`, kui leiduvad arvud `M>0` ja `delta > 0` nii, et</p>
-        `|f(x)|<= M` `\ \ \ forall x in (a - delta, a+ delta)\\{a}`.
-        </div>
+        <h2 id="monotone">Monotoonselt kasvav/kahanev funktsioon</h2>
         <div class="def">
-          <p><b>Definitsioon 9.2.2.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a+`, kui leiduvad arvud `M>0`
-            ja `delta > 0` nii, et</p> 
-            `|f(x)|<= M` `\ \ \ forall x in (a, a+ delta)`.
+          <p><b>Definitsioon.</b> Funktsiooni `f` määramispiirkonnaga X nimetatakse kasvavaks (kahanevaks) hulgas `S
+            sub X`, kui iga `x_1, x_2 in S` korral alati sellest, et `x_1 < x_2` järeldub, et `f(x_1) < f(x_2)`
+              (kahaneva puhul `f(x_1)> f(x_2)`)</p>
         </div>
-        <div class="def">
-          <p><b>Definitsioon 9.2.3.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a-`, kui leiduvad arvud `M>0`
-            ja `delta > 0` nii, et</p> 
-            `|f(x)|<= M` `\ \ \ forall x in (a - delta, a)`.
-        </div>
-        <div class="def">
-          <p><b>Definitsioon 9.2.4.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->infty`, kui leiduvad arvud `M>0`
-            ja `N > 0` nii, et</p> 
-            `|f(x)|<= M` `\ \ \ forall x > N`. 
-        </div>
-        <div class="def">
-          <p><b>Definitsioon 9.2.5.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->-infty`, kui leiduvad arvud
-            `M>0` ja `N > 0` nii, et</p> `|f(x)|<= M` `\ \ \ forall x< -N`.
-        </div>
-        <p><b>Omadus 9.2.1.</b> Kui funktsioon `f` on antud protsessis lõplik piirväärtus, siis on ta selles protsessis tõkestatud.</p>
-        <p><b>Omadus 9.2.2.</b> (piirväätuste ühesus). Vaadeldavas protsessis saab funktsioonil olla ainult üks piirväärtus.</p>
-        <p><b>Omadus 9.2.3.</b> (piirväärtuse monotoonsuse omadus). Kui leidub `delta_0 > 0` nii, et iga `x in (x-delta_0, x+delta_0)\\{a}` korral kehtib `f(x) <= g(x)` ning eksisteerivad piirväärtused `lim_(x->a) f(x) = A` ja `lim_(x->a) g(x)=B`, siis `A<= B`.</p>
-        <p><b>Omadus 9.2.4.</b> (piirväärtuse keskmise muutuja omadus). Kui leidub `delta_0>0` nii, et iga `x in (x-delta_0, x+delta_0)\\{a}` korral kehtib `f(x) <= h(x) <= g(x)` ja leiduvad piirväärtused `lim_(x->a) f(x) = lim_(x->a) g(x) = A`, siis on funktsioonil h piirväärtus protsessis `x->a` ning `lim_(x->a) h(x)=A`.</p>
-        <p>Funktsiooni piirväärtusel on järgmised aritmeetiliste tehetega seotud omadused:</p>
-        <p>kui on olemas lõplikud piirväärtused `lim f(x)` ja `lim g(x)`, siis</p>
-        <ol>
-          <li>`lim c*f(x)=c*lim f(x)\ \ \ (c-const)`</li>
-          <li>`lim [f(x) pm g(x)] =``\ lim f(x) pm lim g(x)`</li>
-          <li>`lim f(x)*g(x)=lim f(x) * lim g(x)`</li>
-          <li>`lim (f(x))/(g(x))=(lim f(x))/(lim g(x))` `\ \ \ (lim g(x) ne 0)`</li>
-        </ol>
-        <p>Aritmeetiliste tehetega seotud piirväärtuste omadused kehtivad suvalise piirprotsessi korral.</p>
-        <h2>Jada piirväärtus</h2>
-        <div class="def"><p><b>Definitsioon 9.3.1.</b> Funktsioon f(x), mille määramispiirkonnaks on kõigi naturaalarvude hulk `N`, nimetatakse <i>jadaks</i>. Suurust `x_n=f(n)` nimetatakse jada üldliikmeks.</p>
-        <p>Jada tähistatakse `{x_1, x_2, ..., x_n, ...}` või `{x_n}_(n in N)` või `(x_n)`.</p>
-        </div>
-        <div class="def"><p><b>Definitsioon 9.3.2.</b> Iga jada, mis saadakse jadast mingi lõpliku või lõpmatu hulga jada elementide väljajätmisel, nimetatakse selle jada osajadaks.</p></div>
-        <div class="def"><p><b>Definitsioon 9.3.3.</b> Arvu `a` nimetatakse jada `(x_n)` <i>piirväärtuseks</i>, kui suvalise positiivse arvu `epsilon > 0` korral leidub selline naturaalarv `n_0=n_0(epsilon)`, et iga naturaalarvu `n`, mis on suurem kui `n_0 (n>=n_0)` korral `|x_n - a| < epsilon`. Tähistatakse</p>
-        `lim_(n->infty) x_n = a`.
-        </div>
-        <div class="def"><p><b>Definitsioon 9.3.4.</b> Öeldakse, et jada `(x_n)` piirväärtus on `infty (-infty)`, kui iga arvu `M>0` korral leidub arv `n_0=n_0(epsilon)`, et kehtib võrratus `x_n > M (X_n < -M)`, alati kui `n>= n_0` ja kirjutatakse</p>
-        `lim_(n->infty) x_n = infty``\ \ \ (lim_(n->infty) x_n = -infty)`.
-        <p>Jada, millel on lõplik piirväärtus nimetatakse <i>koonduvaks jadaks</i>. Jada, millel ei ole lõpliku piirväärtust, nimetatakse <i>hajuvaks jadaks</i>.</p>
-        </div>
-        <h2>Funktsiooni pidevus. Pidevuse omadused.</h2>
+        <p>Funktsiooni `f`, mis rahuldab tingimust</p> `x_1 < x_2\ \=>\ \ f(x_1)<=f(x_2)\ \ forall x_1, x_2 in S` <p>nimetakse
+            <i>monotoonselt kasvavaks hulgas `S`</i>.</p>
+            <p>Funktsiooni `f`, mis aga rahuldab tingimust</p> `x_1 < x_2\ \=>\ \ f(x_1)>=f(x_2)\ \ forall x_1, x_2 in
+              S` <p>nimetakse <i>monotoonselt kahanevaks hulgas `S`</i>.</p>
+              <p>Funktsiooni nimetatakse <i>monotoonseks</i> hulgas `S`, kui ta on kas monotoonselt kasvava või
+                monotoonselt kahanev selles hulgas.</p>
+              <h2 id="pöörd">Pöördfunktsioon. Pöördfunktsiooni leidmine</h2>
+              <p>Me ütleme, et funktsioon `f` on <i>üksühene</i>, kui tema määramispiirkonnas ei leidu kaht erinevat
+                punkti `x_1` ja `x_2`, mille korral `f(x_1) = f(x_2)`. Seega funktsioon `f` on üksühene, kui suvaliste
+                määramispiirkonna punktide `x_1` ja `x_2` korral sellest, et `x_1 ne x_2`, järeldub `f(x_1) ne f(x_2).</p>
+              <p>Näiteks funktsioon `y=sin x`, `x in [-pi/2, pi/2]` on üksühene, kuid see funktsioon ei ole üksühene
+                kogu reaalarvude hulga.</p>
+              <div class="def">
+                <p><b>Definitsioon 8.4.1.</b> Kui iga arvu `y in Y sub R` korral leidub ainult pks arv `x in X sub R`,
+                  mille korral `y=f(x)`, siis öeldakse, et funktsioonil `f` on olemas <i>pöördfunktsioon</i></p>
+                `x=f^-1(y)`<br> (`y in Y`), <p>muutumispiirkonnaga `X`. Kui funktsiooni muutumispiirkond on tõkestatud
+                  hulk, siis nimetatakse funktsiooni tõkestatud funktsiooniks.</p>
+                <p>Seega kui funktsioonil `f` on olemas pöördfunktsioon `f^-1(y)`, siis funktsioon `f` korraldab
+                  üksühese vastavuse piirkondade `X` ja `Y` vahel. Funktsiooni muutumispiirkonna leidmiseks tuleb leida
+                  funktsiooni pöördfunktsioon ja seejärel selle määramispiirkond.</p>
+                <p>Funktsiooni `y=f(x)` pöördfunktsiooni `x=f^-1(y)` leidmiseks tuleb</p>
+                <ol>
+                  <li>avaldada võrrandist `y=f(x)` muutuja `x` muutuja `y` kaudu</li>
+                  <li>vahetada tähised `x` ja `y`.</li>
+                </ol>
+              </div>
+              <h2 id="tehted">Tehted funktsioonidega</h2>
+              <p>Olgu `f` ja `g` funktsioonid, mis on määratud ühel ja samal hulgal `X`. Defineerime funktsioonide
+                summa `f+g`, vahe `f-g`, korrutise `f*g` ja jagatise `f/g` järgmiste seostega</p>
+              <ol>
+                <li>`(f+g)(x)=f(x)+g(x)`</li>
+                <li>`(f-g)(x)=f(x)-g(x)`</li>
+                <li>`(f*g)(x)=f(x)*g(x)`</li>
+                <li>`(f/g)(x)=(f(x))/(g(x))`, `\ \ g(x) ne 0`</li>
+              </ol>
+              <p><b>Näide 8.5.1.</b> Leiame funktsioonide `f(x)=2x` ja `g(x)=x-1` summa, vahe, korrutise ja jagatise.</p>
+              <ol>
+                <li>`(f+g)(x)=f(x)+g(x)=2x+(x-1)=3x+1`</li>
+                <li>`(f-g)(x)=f(x)-g(x)=2x-(x-1)=x+1`</li>
+                <li>`(f*g)(x)=f(x)*g(x)`</li>
+                <li>`(f/g)(x)=(f(x))/(g(x))=(2x)/(x-1)`,`\ \ g(x) ne 0`</li>
+              </ol>
+              <h2 id="liitFunktsioon">Liitfunktsioon. Liitfunktsiooni moodustamine</h2>
+              <p>Olgu antud kaks funktsiooni: `y=f(x)` määramispiirkonnaga `X_f` ja `z=g(y)` määramispiirkonnaga `Y_g`.
+                Asendades suuruse `y` funktsiooni `g` avaldises `f(x)`-ga saame uue funktsiooni mille argumendiks on
+                `x` ja sõltuvaks muutujaks `z`, kusjuures `x` ja `z` vaheline seos on antud kujul `z=g[f(x)]`. Tegemist
+                on funktsioonide `f` ja `g` liitfunktsiooniga. Liitfunktsiooni tähistatakse `g @ f`. Seega saame
+                kirjutada `z=(g @ f)(x)=g[f(x)]`.</p>
+              <p>Näiteks annavad funktsioonid</p> `f(x)=sqrt(x+3)` <p>ja</p> `g(y)=ln y` <p>liitfunktsiooni</p> `(g @
+              f)(x) = ln sqrt (x+3)`. <br>
+              <h2 id="piirvdef">Funktsiooni piirväärtuse definitsioonid piirprotsessis `x->a`, `x->a+`, `x->a-`, `x-> infty`,
+                `x->-infty`. Definitsioone osata selgitada graafiliselt.</h2>
+              <p>Olgu antud funktsioon `f`, mille määramispiirkonnaks on piirkond `X`. Olgu `a` selle piirkonna
+                kuhjumispunkt, st selle punkti `a` igas ümbruses `(a - delta_0, a+delta_0), delta_0 > 0` leidub
+                punktist `a` erinevaid hulga `X` punkte `(x in X, x ne a)`.</p>
+              <div class="def">
+                <p><b>Definitsioon 9.1.1.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->a`,
+                  kui suvalise `epsilon > 0` korral leidub `delta = delta(epsilon)`, et iga `x in X` korral, mis
+                  rahuldab tingimust</p> `0 < |x-a| < sigma,` <p>kehtiv võrratus</p> `|f(x)-A| < epsilon`. <p>Tähistatakse</p>
+                    `lim_(x->a) f(x)=A`. <p>Vaatleme funktsiooni `f`, mille määramispiirkonnaks on `X`. Olgu `a` selle
+                      piirkonna selline kuhjumispunkt, mille mingi parempoolne ümbrus sisaldub hulgas X, st leidub
+                      `delta_0 > 0`, nii et `(a, a+ delta_0) sub X`.</p>
+              </div>
+              <div class="def">
+                <p><b>Definitsioon 9.1.2.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->a+`
+                  `(x-> a-)`, kui suvalise `epsilon > 0` korral leidub `delta = delta(epsilon) > 0`, et iga `x in X`
+                  korral, mis rahuldab tingimust</p> `0 < x -a < delta``\ \ \ (0 < a - x < delta)`, <p>kehtib võrratus</p>
+                  `|f(x) - A| < epsilon`. <p>Tähistatakse</p> `lim_(x->a+) f(x) = A``\ \ \ (lim_(x->a-) f(x)=A)`. <p>Protsessi
+                      `x->a+` `(x->a-)` nimetatakse parempoolseks (vasakpoolseks) piirväärtuseks.</p>
+              </div>
+              <p><b>Omadus 9.1.1.</b> Arv `A` on funktsiooni `f` piirväärtus protsessis `x -> a` parajasti siis, kui
+                `A` on selle funktsiooni `f` piirväärtus nii protsessis `x->a+` kui ka `x-> a-`.</p>
+              <div class="def">
+                <p><b>Definitsioon 9.1.3.</b> Arvu `A` nimetatakse funktsiooni `f` piirväärtuseks protsessis `x->infty`
+                  `("või " x->-infty)` kui iga positiivse arvu `epsilon > 0` jaoks leidub selline positiivne arv
+                  `N=N(epsilon)>0`, et iga</p> `x>N``\ \ \ (x < -N)``\ \ \ (x in X)` <p>korral kehtib võrratus</p>
+                  `|f(x)-N| < epsilon`. <p>Sel juhul kirjutatakse</p> `lim_(x->infty) f(x) = A` `\ \ \ (lim_(x->-infty)
+                    f(x) = A)`
+              </div>
+              <h2 id="piirvOmadused">Funktsiooni piirväärtuse omadused</h2>
+              <div class="def">
+                <p><b>Definitsioon 9.2.1.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a`, kui
+                  leiduvad arvud `M>0` ja `delta > 0` nii, et</p> `|f(x)|<= M` `\ \ \ forall x in (a - delta, a+
+                  delta)\\{a}`. </div> <div class="def">
+                  <p><b>Definitsioon 9.2.2.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a+`, kui
+                    leiduvad arvud `M>0` ja `delta > 0` nii, et</p> `|f(x)|<= M` `\ \ \ forall x in (a, a+ delta)`. </div>
+                    <div class="def">
+                    <p><b>Definitsioon 9.2.3.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->a-`, kui
+                      leiduvad arvud `M>0` ja `delta > 0` nii, et</p> `|f(x)|<= M` `\ \ \ forall x in (a - delta, a)`.
+                      </div> <div class="def">
+                      <p><b>Definitsioon 9.2.4.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->infty`,
+                        kui leiduvad arvud `M>0` ja `N > 0` nii, et</p> `|f(x)|<= M` `\ \ \ forall x> N`.
+              </div>
+              <div class="def">
+                <p><b>Definitsioon 9.2.5.</b> Me ütleme, et funktsioon `f` on tõkestatud protsessis `x->-infty`, kui
+                  leiduvad arvud `M>0` ja `N > 0` nii, et</p> `|f(x)|<= M` `\ \ \ forall x< -N`. </div> <p><b>Omadus
+                    9.2.1.</b> Kui funktsioon `f` on antud protsessis lõplik piirväärtus, siis on ta selles protsessis
+                  tõkestatud.</p>
+                  <p><b>Omadus 9.2.2.</b> (piirväätuste ühesus). Vaadeldavas protsessis saab funktsioonil olla ainult
+                    üks piirväärtus.</p>
+                  <p><b>Omadus 9.2.3.</b> (piirväärtuse monotoonsuse omadus). Kui leidub `delta_0 > 0` nii, et iga `x
+                    in (x-delta_0, x+delta_0)\\{a}` korral kehtib `f(x) <= g(x)` ning eksisteerivad piirväärtused
+                      `lim_(x->a) f(x) = A` ja `lim_(x->a) g(x)=B`, siis `A<= B`.</p> <p><b>Omadus 9.2.4.</b>
+                        (piirväärtuse keskmise muutuja omadus). Kui leidub `delta_0>0` nii, et iga `x in (x-delta_0,
+                        x+delta_0)\\{a}` korral kehtib `f(x) <= h(x) <=g(x)` ja leiduvad piirväärtused `lim_(x->a) f(x)
+                          = lim_(x->a) g(x) = A`, siis on funktsioonil h piirväärtus protsessis `x->a` ning `lim_(x->a)
+                          h(x)=A`.</p>
+                  <p>Funktsiooni piirväärtusel on järgmised aritmeetiliste tehetega seotud omadused:</p>
+                  <p>kui on olemas lõplikud piirväärtused `lim f(x)` ja `lim g(x)`, siis</p>
+                  <ol>
+                    <li>`lim c*f(x)=c*lim f(x)\ \ \ (c-const)`</li>
+                    <li>`lim [f(x) pm g(x)] =``\ lim f(x) pm lim g(x)`</li>
+                    <li>`lim f(x)*g(x)=lim f(x) * lim g(x)`</li>
+                    <li>`lim (f(x))/(g(x))=(lim f(x))/(lim g(x))` `\ \ \ (lim g(x) ne 0)`</li>
+                  </ol>
+                  <p>Aritmeetiliste tehetega seotud piirväärtuste omadused kehtivad suvalise piirprotsessi korral.</p>
+                  <h2 id="jadaPiirv">Jada piirväärtus</h2>
+                  <div class="def">
+                    <p><b>Definitsioon 9.3.1.</b> Funktsioon f(x), mille määramispiirkonnaks on kõigi naturaalarvude
+                      hulk `N`, nimetatakse <i>jadaks</i>. Suurust `x_n=f(n)` nimetatakse jada üldliikmeks.</p>
+                    <p>Jada tähistatakse `{x_1, x_2, ..., x_n, ...}` või `{x_n}_(n in N)` või `(x_n)`.</p>
+                  </div>
+                  <div class="def">
+                    <p><b>Definitsioon 9.3.2.</b> Iga jada, mis saadakse jadast mingi lõpliku või lõpmatu hulga jada
+                      elementide väljajätmisel, nimetatakse selle jada osajadaks.</p>
+                  </div>
+                  <div class="def">
+                    <p><b>Definitsioon 9.3.3.</b> Arvu `a` nimetatakse jada `(x_n)` <i>piirväärtuseks</i>, kui suvalise
+                      positiivse arvu `epsilon > 0` korral leidub selline naturaalarv `n_0=n_0(epsilon)`, et iga
+                      naturaalarvu `n`, mis on suurem kui `n_0 (n>=n_0)` korral `|x_n - a| < epsilon`. Tähistatakse</p>
+                        `lim_(n->infty) x_n = a`.
+                  </div>
+                  <div class="def">
+                    <p><b>Definitsioon 9.3.4.</b> Öeldakse, et jada `(x_n)` piirväärtus on `infty (-infty)`, kui iga
+                      arvu `M>0` korral leidub arv `n_0=n_0(epsilon)`, et kehtib võrratus `x_n > M (X_n < -M)`, alati
+                        kui `n>= n_0` ja kirjutatakse</p> `lim_(n->infty) x_n = infty``\ \ \ (lim_(n->infty) x_n =
+                    -infty)`. <p>Jada, millel on lõplik piirväärtus nimetatakse <i>koonduvaks jadaks</i>. Jada, millel
+                      ei ole lõpliku piirväärtust, nimetatakse <i>hajuvaks jadaks</i>.</p>
+                  </div>
+                  <h2 id="pidevus">Funktsiooni pidevus. Pidevuse omadused.</h2>
+                  <h3 id="pidevusDef">Pidevuse mõiste</h3>
+                  <div class="def">
+                    <p><b>Definitsioon 10.1.1.</b> Funktsiooni `f(x)` nimetatakse <i>pidevaks punktis a</i>, kui on
+                      täidetud tingimused:</p>
+                    <ol>
+                      <li>`exists f(a);`</li>
+                      <li>`EE lim_(x->a) f(x);`</li>
+                      <li>`lim_(x->a) f(x) = a;`</li>
+                    </ol>
+                  </div>
+                  <p>Funktsiooni `f(x)`, mis ei ole pidev punktis `a`, nimetatakse <i>katkevaks funktsiooniks</i>
+                    punktis `a`, kusjuures punkti `a` nimetatakse funktsiooni f(x) <i>katkevuspunktiks</i>. </p>
+                  <p>Punkti `a` nimetatakse funktsiooni `f(x)` <i>esimest liiki katkevuspunktiks</i>, kui punktis `a`
+                    eksisteerivad funktsiooni `f(x)` ühepoolsed lõplikud väärtused.</p>
+                  <p>Funktsiooni `f(x)` iga katkevuspunkti, mis ei ole esimest liiki, nimetatakse selle funktsiooni <i>teist
+                      liiki katkevuspunktiks</i>.</p>
+                  <h2 id="pidevusOmadused">Pidevuse omadused</h2>
+                  <div class="def">
+                    <p><b>Definitsioon 10.2.1.</b> Suurust `Delta x = x - a` nimetatakse <i>argumendi muuduks</i> ehk
+                      <i>argumendi kasvuks</i> ja suurust</p> `Delta y = f(x) - f(a) = f(x+Delta x)- f(a)` <p>nimetatakse
+                      argumendi muudule `Delta x` vastavaks <i>funktsiooni `y=f(x)` muuduks</i> ehk kasvuks punktis
+                      `a`.</p>
+                  </div>
+              </div>
       </div>
     </div>
-  </div>
+    <script>
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+      });
+    </script>
 </body>
 
 </html>
